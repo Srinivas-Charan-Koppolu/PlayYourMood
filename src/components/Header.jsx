@@ -19,7 +19,7 @@ const Header = ({ isLoggedIn = false, profileImage = null }) => {
           <>
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/signup" className="nav-link">Signup</Link>
+            <Link to="/register" className="nav-link">Signup</Link>
           </>
         ) : (
           <>
