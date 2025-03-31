@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "./../components/Header";
+import HomePageMainContent from "./../components/HomePageMainContent";
+import "./../styles/home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <Header />
-      Home
+      <HomePageMainContent />
     </div>
   );
 };
