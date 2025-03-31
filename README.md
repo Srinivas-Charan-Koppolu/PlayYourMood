@@ -10,22 +10,33 @@
 PlayYourMood/
 ├── public/
 ├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── fonts/
+│   │   └── icons/
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
-│   │   └── Header.jsx
+│   │   ├── Header.jsx
+│   │   ├── MusicPlayer.jsx
+│   │   ├── Playlist.jsx
+│   │   └── SongItem.jsx
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Login.jsx
 │   │   ├── Register.jsx
-│   │   └── Dashboard.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Explore.jsx
+│   │   └── Profile.jsx
 │   ├── services/
 │   │   └── api.js
 │   ├── styles/
 │   │   ├── home.css
 │   │   ├── login.css
 │   │   ├── register.css
-│   │   └── dashboard.css
+│   │   ├── dashboard.css
+│   │   ├── explore.css
+│   │   └── profile.css
 │   ├── routes/
 │   │   └── Route.jsx
 │   ├── App.jsx
@@ -37,12 +48,13 @@ PlayYourMood/
 ---
 
 ## 🌟 Features (Current Phase)
-- User Registration UI
-- Login Page UI
-- Dashboard UI structure
+- User Authentication (Login & Registration UI)
+- Dashboard with Personalized Playlists
 - Navbar, Header, Footer reusable components
+- Music Player Component (Basic UI)
+- Explore Section for Music Discovery
 - Responsive layout using CSS Grid and Flexbox
-- Basic routing with `react-router-dom`
+- Routing with `react-router-dom`
 
 ---
 
@@ -52,6 +64,7 @@ PlayYourMood/
 - **CSS3 (Pure CSS styling)**
 - **JavaScript (ES6+)**
 - **Vite (Development server)**
+- **Google Fonts for Typography**
 
 ---
 
@@ -82,6 +95,7 @@ npm run dev
 | Project Structure           | K Srinivas Charan |
 | UI Design & Styling         | Your Team Member1 |
 | Routing Setup               | Your Team Member2 |
+| Music Player UI             | Your Team Member3 |
 
 ---
 
@@ -91,7 +105,8 @@ npm run dev
 | Login & Register Design  | In Progress | DD-MM-YYYY  |
 | Dashboard UI Setup       | Pending     | DD-MM-YYYY  |
 | API Service Setup        | Planned     | DD-MM-YYYY  |
-| Music Player Feature     | Future Phase| —           |
+| Music Player Integration | Future Phase| —           |
+| Explore Music Section    | Future Phase| —           |
 
 ---
 
@@ -99,6 +114,8 @@ npm run dev
 - Home Page
 - Login & Register Pages
 - Dashboard Preview
+- Music Player UI
+- Explore Section
 
 ---
 
@@ -112,10 +129,9 @@ Follow commit message conventions:
 
 ---
 
-## 📜 License
+## 🐝 License
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-### 🎧 *Play Your Mood - Let your vibes choose the music!* 🎵
-
+### 🎷 *Play Your Mood - Let your vibes choose the music!* 🎵
