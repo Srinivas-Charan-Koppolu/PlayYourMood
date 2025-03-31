@@ -5,7 +5,7 @@
     align-items: center;
     padding: 6px 90px; /* Further reduced height */
     background: transparent; /* No background, page bg will show */
-    border-bottom: 2px solid black; /* Bottom border added */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Bottom border added */
   }
   
   /* Header box: Glassy effect with skin color */
