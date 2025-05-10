@@ -3,7 +3,13 @@ import "./../styles/headerComponent.css";
 import { Link } from "react-router-dom";
 import PYMLogo from "./../assets/PYM_Logo.jpg";
 
+import defaultProfileImage from "./../assets/defaultProfile.png"; // Default profile image
+
 const Header = ({ isLoggedIn = false, profileImage = null }) => {
+  // Override isLoggedIn based on JWT token in localStorage
+  const token = localStorage.getItem("jwtToken");
+  isLoggedIn = !!token;
+
   return (
     <header className="header-container">
       <div className="header-box">
@@ -11,7 +17,9 @@ const Header = ({ isLoggedIn = false, profileImage = null }) => {
           <div className="logo-circle">
             <img src={PYMLogo} alt="Play Your Mood Logo" className="logo" />
           </div>
-          <h1 className="title">PLAY YOUR MOOD</h1>
+          <a href="/" style={{ textDecoration: "none" }}>
+            <h1 className="title">PLAY YOUR MOOD</h1>
+          </a>
         </div>
       </div>
       <nav className="nav-buttons">
@@ -23,8 +31,14 @@ const Header = ({ isLoggedIn = false, profileImage = null }) => {
           </>
         ) : (
           <>
-            <input type="text" placeholder="Search..." className="search-bar" />
-            <img src={profileImage} alt="Profile" className="profile-img" />
+            {/* <input type="text" placeholder="Search..." className="search-bar" /> */}
+            <Link to="/dashboard" className="nav-link">Dashboard</Link>
+            <img
+              src={profileImage || defaultProfileImage}
+              alt="Profile"
+              className="profile-img"
+            />
+            {/* <Link to="/logout" className="nav-link">Logout</Link> */}
           </>
         )}
       </nav>

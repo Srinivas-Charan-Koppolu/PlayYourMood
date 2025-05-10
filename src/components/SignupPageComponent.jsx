@@ -46,9 +46,9 @@ const SignupPageComponent = () => {
     const token = localStorage.getItem("jwtToken");
     if (token) {
       // If token exists, redirect to Dashboard
-      setTimeout(()=>{
+      setTimeout(() => {
         navigate("/dashboard");
-      })
+      });
     }
   }, [navigate]);
 
