@@ -14,14 +14,14 @@ const LoginPageComponent = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // Check if token exists in localStorage when the component mounts
+  // Check if token or userId exists in localStorage on mount
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");
-    if (token) {
-      // If token exists, redirect to Dashboard
-      setTimeout(()=>{
+    const userId = localStorage.getItem("userId");
+    if (token && userId) {
+      setTimeout(() => {
         navigate("/dashboard");
-      })
+      });
     }
   }, [navigate]);
 
@@ -46,15 +46,16 @@ const LoginPageComponent = () => {
         }),
       });
 
-      const data = await response.text(); // Spring Boot returns a simple text message
+      const data = await response.json(); // expecting { message: "...", userId: ... }
 
-      if (response.ok) {
-        // If successful login, store the JWT token in localStorage
-        localStorage.setItem("jwtToken", data);
-        setMessage("Login successful!");
-        navigate("/dashboard"); // Redirect to the dashboard page after login
+      if (response.ok && data.userId !== -1) {
+        // Store login details in localStorage
+        localStorage.setItem("jwtToken", "dummyToken"); // You can use real JWT later
+        localStorage.setItem("userId", data.userId); // ✅ Save userId
+        setMessage(data.message);
+        navigate("/dashboard");
       } else {
-        setError(data); // Show error message
+        setError(data.message || "Login failed");
       }
     } catch (err) {
       setError("Server Error. Please try again.");
