@@ -1,138 +1,144 @@
 
-# 🎧 PlayYourMood
+# 🎧 Play Your Mood
 
-**PlayYourMood** is a sleek, personalized music streaming web app designed to let users **play music that matches their mood**. It supports custom playlists, user profiles, a stylish audio player, and smooth transitions — all in one intuitive UI.
-
----
-
-## 🌐 Live Preview
-
-> 🚧 *[Coming Soon]* — Deployed version link will be added after hosting.
+> A multi-page music streaming web application where users can log in, explore moods, create playlists, and play songs with a stylish UI.  
+> Designed with Glassmorphism, built using **React** and **Spring Boot**, and styled with pure **CSS**.
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 PlayYourMood/
 │
-├── public/                  # Static public files (HTML, favicon, etc.)
+├── public/
+│   └── index.html
 │
 ├── src/
-│   ├── assets/              # Images, icons, and media assets
-│   │   ├── images/
-│   │   └── icons/
+│   ├── components/
+│   │   ├── AudioComponent.jsx
+│   │   ├── MenuComponent.jsx
+│   │   ├── PlayingComponent.jsx
+│   │   ├── PlaylistComponent.jsx
+│   │   ├── ProfileComponent.jsx
+│   │   └── ProfilePage.jsx
 │   │
-│   ├── components/          # Reusable UI components
-│   │   ├── Common/          # Navbar, Sidebar, Footer, etc.
-│   │   ├── Player/          # PlayingComponent, AudioComponent
-│   │   └── Profile/         # ProfileComponent, MenuComponent, PlaylistComponent
+│   ├── styles/
+│   │   ├── AudioComponent.css
+│   │   ├── MenuComponent.css
+│   │   ├── PlayingComponent.css
+│   │   ├── PlaylistComponent.css
+│   │   ├── ProfileComponent.css
+│   │   └── ProfilePage.css
 │   │
-│   ├── pages/               # Page-level components (Home, Explore, Profile)
-│   ├── styles/              # Global and module CSS
-│   ├── utils/               # Helper functions and constants
-│   ├── App.jsx              # Main React component
-│   ├── index.js             # Entry point
-│   └── router.js            # React Router configuration
+│   ├── App.jsx
+│   └── index.js
 │
-├── .gitignore
 ├── package.json
-├── README.md
-└── vite.config.js
+└── README.md
 ```
 
 ---
 
-## ✨ Features
+## 🌟 Features
 
-- 🎵 **Mood-based music streaming**
-- 🧑‍💼 **User profile customization**
-- 📃 **Dynamic playlist handling**
-- 🎚️ **Minimalist audio player**
-- 🌙 **Dark mode by default**
-- 📱 **Responsive design**
-- ⚙️ Built with **React + Vite**
+- 🎶 Mood-based music selection (Manual)
+- 🔊 Audio player with Play, Pause, Forward
+- 🧑 User Profile and Playlist management
+- 🎨 Fully responsive UI with animations & hover effects
+- 🎭 Mood themes: Happy, Sad, Relaxed, etc.
+- 🚀 Smooth navigation between multi-pages
+- 🎵 Styled with Glassmorphism & custom CSS transitions
 
 ---
 
-## 🚀 Getting Started
+## 🧑‍💻 Tech Stack
 
-### Prerequisites
+### ✅ Used in Project
+- **Frontend**: React, JavaScript (ES6), HTML5, CSS3 (no frameworks)
+- **Backend**: Spring Boot (Java)
+- **API**: Fetch API
+- **Hosting**: GitHub Pages (Frontend), Localhost 8080 (Backend)
+- **Build Tool**: Vite
 
-- Node.js (v16+)
-- npm or yarn
+### ❌ Not Used But Common in Projects
+- Redux
+- TailwindCSS / Bootstrap
+- MongoDB / MySQL
+- Node.js / Express.js
+- TypeScript
+- Firebase
+- Docker
 
-### Installation
+---
+
+## 🧑‍🤝‍🧑 Team Details
+
+| Name               | ID          | Role                           |
+|--------------------|-------------|--------------------------------|
+| Sahakshree         | 2300031349  | UI/UX Styling & Mood Sections |
+| Srija              | 2300031650  | Explore Page & Routing        |
+| Srinivas Charan K  | 2300033153  | Component Structure, Backend & README |
+
+---
+
+## 🕒 Time Taken
+
+| Task                       | Estimated Time |
+|----------------------------|----------------|
+| Design & Planning          | 1 day          |
+| Component Development      | 3 days         |
+| Backend Integration        | 1 day          |
+| Testing & Debugging        | 0.5 day        |
+| Final UI Polish & Delivery | 0.5 day        |
+| **Total Time**             | **~6 days**    |
+
+---
+
+## 🔧 How to Run
+
+### Frontend
 
 ```bash
-git clone https://github.com/your-username/PlayYourMood.git
 cd PlayYourMood
 npm install
 npm run dev
 ```
 
-The app runs locally at `http://localhost:5173/`
+Visit: [http://localhost:5173](http://localhost:5173)
+
+### Backend (Spring Boot)
+
+Run on port 8080 using your IDE or:
+
+```bash
+./mvnw spring-boot:run
+```
 
 ---
 
-## 🧩 Components Breakdown
+## 🔜 Upcoming Features
 
-### 📁 Profile Components
-
-| Component | Description |
-|----------|-------------|
-| `ProfileComponent.jsx` | Displays user details, avatar, and mood stats |
-| `MenuComponent.jsx`    | Sidebar menu within the profile page |
-| `PlaylistComponent.jsx`| Lists and manages the user's playlists |
-| `ProfilePage.jsx`      | Full page layout with all the above |
-
-### 🔊 Player Components
-
-| Component | Description |
-|----------|-------------|
-| `PlayingComponent.jsx` | Shows current song, album art, controls |
-| `AudioComponent.jsx`   | Audio context and player logic |
-
-### 🧱 Common Components
-
-| Component | Description |
-|----------|-------------|
-| `Navbar.jsx` | Top navigation with app name/logo |
-| `Sidebar.jsx`| Left side navigation for page routing |
-| `Footer.jsx` | Bottom footer with copyright |
+- AI-based Mood Detection
+- Theme Toggle (Light/Dark)
+- Upload Own Tracks
+- Authentication Backend Integration
+- Music Recommendation System
 
 ---
 
-## 🎨 Styling
+## 💡 Note
 
-- 🎨 Pure **CSS Modules** used for each component
-- 💠 Global styles in `styles/global.css`
-- 🌌 Dark mode + glassmorphism for a modern UI
-- ✨ Smooth transitions & hover animations
+This app uses manual mood filtering and local dummy music data for now.  
+The backend APIs are mocked and ready for expansion.
 
 ---
 
-## 🔧 Future Improvements
+## 📜 License
 
-- 🔐 User authentication (login/register)
-- 🎧 AI-based mood detection
-- 📈 Song stats dashboard
-- 📲 PWA version for mobile
+Licensed under MIT.  
+**Developed as part of FSAD Mini Project.**
 
 ---
 
-## 🙌 Contribution
-
-Feel free to fork this repository, raise issues, or suggest features.
-
-> PRs are welcome. Let’s build the vibe together!
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-> _“When words fail, music speaks.” — Hans Christian Andersen_
+> _“Music expresses that which cannot be said and on which it is impossible to be silent.” – Victor Hugo_
